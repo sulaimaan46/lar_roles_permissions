@@ -1,0 +1,17 @@
+{
+    "name": "Laravel Roles and Permission",
+    "short_name": "LRP",
+    "start_url": "/index.php",
+    "background_color": "#6777ef",
+    "description": "Laravel Concepts",
+    "display": "fullscreen",
+    "theme_color": "#6777ef",
+    "icons": [
+        {
+            "src": "images/no_image.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

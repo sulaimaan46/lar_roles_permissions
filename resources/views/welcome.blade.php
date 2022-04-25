@@ -19,6 +19,10 @@
                 font-family: 'Nunito', sans-serif;
             }
         </style>
+                <!-- PWA  -->
+        <meta name="theme-color" content="#6777ef"/>
+        <link rel="apple-touch-icon" href="{{ asset('images/no_image.png') }}">
+        <link rel="manifest" href="{{ asset('/manifest.json') }}">
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
@@ -57,4 +61,12 @@
             </div>
         </div>
     </body>
+    <script src="{{ asset('/sw.js') }}"></script>
+    <script>
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/sw.js").then(function (reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
+    </script>
 </html>
